@@ -1,0 +1,11 @@
+.daytime_nightime_container {
+	.column_header {
+		text-align: center;
+	}
+	#daytime_posts {
+		color: $dark;
+	}
+	#nightime_posts {
+		color: $white;
+	}
+}
