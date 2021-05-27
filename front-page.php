@@ -18,6 +18,12 @@
 			'nopaging' 			=> true,
 		)
 	);
+	$house_rules = new WP_Query(
+		array(
+			'category_name'		=> 'rules',
+			'posts_per_page' 	=> 1,
+		)
+	);
 	wp_reset_postdata(); ?>
 
 <header id="home_introduction" class="drawer_container">
@@ -57,6 +63,17 @@
 
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 	</section>
-
 </main>
+<aside class="popup">
+	<div class="pull-tab opened">
+		House Rules
+	</div>
+	<div id="drawer-content" class="bottom-drawer">
+		<?php if( $house_rules->have_posts() ) : while( $house_rules->have_posts() ) : $house_rules->the_post(); ?>
+			<div class="padding">
+				<?php the_content(); ?>
+			</div>
+
+		<?php endwhile; endif; wp_reset_postdata(); ?>
+</aside>
 <?php get_footer(); ?>
