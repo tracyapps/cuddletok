@@ -10,6 +10,23 @@
 	}
 }
 
+@include phone-only {
+	#nightime_posts {
+		display: none;
+	}
+	#daytime_posts {
+		display: block;
+	}
+	.night {
+		#nightime_posts {
+			display: block;
+		}
+		#daytime_posts {
+			display: none;
+		}
+	}
+}
+
 #home_introduction {
 	a.drawer_button {
 		display: block;

@@ -451,7 +451,7 @@ input[type="submit"] {
   width: 80vw;
   height: auto;
   max-width: 900px;
-  min-width: 400px;
+  min-width: 320px;
   margin: 5px auto; }
   #cuddle_tok_logo svg {
     width: 100%;
@@ -990,6 +990,16 @@ footer.site-footer {
 
 .daytime_nightime_container #nightime_posts {
   color: #fff; }
+
+@media (max-width: 600px) {
+  #nightime_posts {
+    display: none; }
+  #daytime_posts {
+    display: block; }
+  .night #nightime_posts {
+    display: block; }
+  .night #daytime_posts {
+    display: none; } }
 
 #home_introduction a.drawer_button {
   display: block;
