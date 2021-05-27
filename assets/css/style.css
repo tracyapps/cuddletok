@@ -1081,7 +1081,7 @@ footer.site-footer {
     margin: 0 auto; }
   @media (max-width: 600px) {
     .bottom-drawer {
-      max-height: 90vh;
+      max-height: 80vh;
       overflow-x: auto; } }
 
 header.article-header .byline {
