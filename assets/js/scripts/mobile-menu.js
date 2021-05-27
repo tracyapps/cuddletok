@@ -1,9 +1,9 @@
 /**
- * scripts for the simple mobile menu
+ * scripts for the simple mobile menu (replacing for the homepage drawer because, lazy
  */
 
 jQuery(document).ready( function($) {
-	$('#toggle').click( function() {
-		$("#menu-main-navigation").toggleClass("open");
+	$('#drawer_open_close_button').click( function() {
+		$("#intro_content").toggleClass("closed");
 	});
 });

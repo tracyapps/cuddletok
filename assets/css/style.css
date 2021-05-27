@@ -153,7 +153,7 @@ button {
   padding-bottom: 2rem; }
 
 .padding {
-  padding: 4rem; }
+  padding: 2rem; }
 
 .centered-text {
   text-align: center; }
@@ -169,8 +169,7 @@ h4,
 h5 {
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
-  text-transform: capitalize;
-  margin-bottom: 0.3em; }
+  margin: 0; }
 
 h1 {
   font-size: 60.5px; }
@@ -991,6 +990,43 @@ footer.site-footer {
 
 .daytime_nightime_container #nightime_posts {
   color: #fff; }
+
+#home_introduction a.drawer_button {
+  display: block;
+  font-size: 11px;
+  padding: 0.25em;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 5px;
+  background: #fff;
+  color: #101010;
+  border-top: 1px solid #101010; }
+  .night #home_introduction a.drawer_button {
+    background: #101010;
+    color: #fff;
+    border-top: 1px solid #fff; }
+  #home_introduction a.drawer_button:hover, #home_introduction a.drawer_button:target {
+    background: #101010;
+    color: #fff; }
+    .night #home_introduction a.drawer_button:hover, .night #home_introduction a.drawer_button:target {
+      background: #fff;
+      color: #101010; }
+
+#home_introduction #intro_content {
+  border: 1px solid #101010;
+  overflow: hidden;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  max-height: none; }
+  #home_introduction #intro_content.closed {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0; }
+  #home_introduction #intro_content .padding {
+    max-width: 950px;
+    margin: 0 auto; }
 
 header.article-header .byline {
   padding: 0 0 6rem 0; }

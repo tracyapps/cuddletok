@@ -9,3 +9,57 @@
 		color: $white;
 	}
 }
+
+#home_introduction {
+	a.drawer_button {
+		display: block;
+		font-size: 11px;
+		padding: 0.25em;
+		text-transform: uppercase;
+		font-weight: 800;
+		text-align: center;
+		margin-top: 5px;
+		background: $white;
+		color: $dark;
+		border-top: 1px solid $dark;
+
+		.night & {
+			background: $dark;
+			color: $white;
+			border-top: 1px solid $white;
+		}
+
+		&:hover,
+		&:target {
+			background: $dark;
+			color: $white;
+
+			.night & {
+				background: $white;
+				color: $dark;
+			}
+		}
+	}
+
+	#intro_content {
+		//display: block;
+		//height: auto;
+		border: 1px solid $dark;
+		overflow: hidden;
+		opacity: 1;
+		transition: all .3s ease-in-out;
+		max-height: none;
+
+		&.closed {
+			max-height: 0;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+		}
+
+		.padding {
+			max-width: 950px;
+			margin: 0 auto;
+		}
+	}
+}

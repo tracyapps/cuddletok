@@ -118,7 +118,7 @@ button {
 }
 
 .padding {
-	padding: 4rem;
+	padding: 2rem;
 }
 
 .centered-text {
@@ -141,8 +141,8 @@ h4,
 h5 {
 	font-family: $header-font;
 	font-weight: 800;
-	text-transform: capitalize;
-	margin-bottom: 0.3em;
+	//text-transform: capitalize;
+	margin: 0;
 }
 
 h1 {
