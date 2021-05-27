@@ -130,4 +130,9 @@
 		max-width: 1700px;
 		margin: 0 auto;
 	}
+
+	@include phone-only {
+		max-height: 90vh;
+		overflow-x: auto;
+	}
 }

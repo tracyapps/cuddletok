@@ -1079,6 +1079,10 @@ footer.site-footer {
     min-height: 300px;
     max-width: 1700px;
     margin: 0 auto; }
+  @media (max-width: 600px) {
+    .bottom-drawer {
+      max-height: 90vh;
+      overflow-x: auto; } }
 
 header.article-header .byline {
   padding: 0 0 6rem 0; }
