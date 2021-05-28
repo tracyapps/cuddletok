@@ -39,7 +39,7 @@
 	padding: $padding;
 	text-align: center;
 	text-decoration: none;
-	color: $text !important;
+	color: $text;
 	border-radius: $border-radius;
 	display: inline-block;
 	border: 1px solid darken( $color, 20 );
@@ -51,7 +51,6 @@
 	&:focus,
 	&:visited:hover {
 		background: $color-hover;
-		color: $text-hover !important;;
 	}
 }
 

@@ -43,8 +43,9 @@
 
 
 	<section id="daytime_posts" class="daytime column">
-		<?php if( $daytime_posts->have_posts() ) : while( $daytime_posts->have_posts() ) : $daytime_posts->the_post(); ?>
 		<h2 class="column_header">daytime</h2>
+		<?php if( $daytime_posts->have_posts() ) : while( $daytime_posts->have_posts() ) : $daytime_posts->the_post(); ?>
+
 		<div class="post_container padding">
 			<h3 class="front_page_title"><?php the_title(); ?></h3>
 			<?php the_content(); ?>
@@ -53,9 +54,10 @@
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 	</section>
 	<section id="nightime_posts" class="nightime column">
+		<h2 class="column_header">nighttime</h2>
 		<?php if( $nightime_posts->have_posts() ) : while( $nightime_posts->have_posts() ) : $nightime_posts->the_post(); ?>
 
-			<h2 class="column_header">nighttime</h2>
+
 			<div class="post_container padding">
 				<h3 class="front_page_title"><?php the_title(); ?></h3>
 				<?php the_content(); ?>

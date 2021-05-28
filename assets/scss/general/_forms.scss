@@ -15,35 +15,93 @@ input[type="datetime"],
 input[type="datetime-local"],
 select,
 textarea {
-	padding: 0.5rem 1rem;
+	padding: 0.25rem 1rem;
 	outline: none;
-	border: 1px solid rgba( $default-text-color, 0.2 );
+	border: 1px solid rgba( $dark, 0.2 );
 	border-radius: 3px;
-	background: $default-background-color;
+	background: $white;
 	font-size: $base-font-size;
-	font-family: $sans-serif;
-	margin-left: 1rem;
 	box-shadow: none;
 	-webkit-appearance: none;
+	//display: block;
+	width: 100%;
+
+	.night & {
+		border: 1px solid rgba( $white, 0.2 );
+		background: $dark;
+	}
 
 	&:hover {
-		border: 1px solid $primary-color;
+		border: 1px dotted #ff0089;
 	}
 
 	&:focus {
 		outline: none;
-		border: 1px dotted $secondary-color;
-		background: $default-background-color;
+		border: 1px solid #ff0089;
+	}
+}
+body {
+	#daytime_posts {
+		div.frm_forms {
+			display: block;
+		}
+	}
+	#nightime_posts {
+		div.frm_forms {
+			display: none;
+		}
 	}
 }
 
-input[type="submit"] {
-	font-size: $base-font-size;
-	font-family: $sans-serif;
+body.night {
+	#daytime_posts {
+		div.frm_forms {
+			display: none;
+		}
+	}
+	#nightime_posts {
+		div.frm_forms {
+			display: block;
+		}
+	}
+}
+
+.frm_description {
+	font-size: 80%;
+	//margin-bottom: 2rem;
+}
+
+.frm_form_field {
+	margin-bottom: 1.5rem;
+}
+
+#page_main {
+	input[type="submit"],
+	button.frm_button_submit {
+		padding:15px 25px;
+		background-color: $dark;
+		color: $white;
+		font-weight:bold;
+		cursor:pointer;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		transition: all linear 1s;
+		text-transform: uppercase;
+
+		&:hover {
+			border: 2px solid #ff0089;
+		}
+
+		.night & {
+			background-color: $white;
+			color: $dark;
+		}
+	}
 }
 
 
-// fixing some formidble pro stuff that they sneak in even when styles are off
+
+	// fixing some formidble pro stuff that they sneak in even when styles are off
 .frm_form_field.frm_left_container input:not([type=radio]):not([type=checkbox]), .frm_form_field.frm_left_container:not(.frm_dynamic_select_container) select, .frm_form_field.frm_left_container textarea, .frm_form_field.frm_left_container .wp-editor-wrap, .frm_form_field.frm_left_container .frm_opt_container, .frm_form_field.frm_left_container .frm_dropzone, .frm_form_field.frm_left_container .frm-g-recaptcha, .frm_form_field.frm_left_container .g-recaptcha, .frm_form_field.frm_left_container .chosen-container, .frm_form_field.frm_left_container .frm_combo_inputs_container, .frm_form_field.frm_right_container input:not([type=radio]):not([type=checkbox]), .frm_form_field.frm_right_container:not(.frm_dynamic_select_container) select, .frm_form_field.frm_right_container textarea, .frm_form_field.frm_right_container .wp-editor-wrap, .frm_form_field.frm_right_container .frm_opt_container, .frm_form_field.frm_right_container .frm_dropzone, .frm_form_field.frm_right_container .frm-g-recaptcha, .frm_form_field.frm_right_container .g-recaptcha, .frm_form_field.frm_right_container .chosen-container, .frm_form_field.frm_right_container .frm_combo_inputs_container {
 	max-width: 100%;
 }
