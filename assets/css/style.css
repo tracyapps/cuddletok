@@ -950,6 +950,12 @@ footer.site-footer {
       .block-hero .hero-content .hero-content-container h1 {
         margin-top: 0; }
 
+h1.page-title {
+  text-align: center;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid; }
+
 .daytime_nightime_container .column_header {
   text-align: center; }
 
